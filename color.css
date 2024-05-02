@@ -24,7 +24,7 @@
 
 .del-main {
     /* Darker background with linear gradient */
-    background-image: linear-gradient(rgba(20, 9, 96, 0.7), rgba(20, 9, 96, 0.7)), url(/images/project.jpg);
+    background-image: linear-gradient(rgba(20, 9, 96, 0.7), rgba(20, 9, 96, 0.7)), url(images/project.jpg);
     background-size: cover;
     height: 50vh;
 }
