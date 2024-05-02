@@ -1,0 +1,51 @@
+ /* Importing Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    font-family: "Varela Round", sans-serif;
+
+}
+.navbar-brand img {
+    width: 100px; /* Increase the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .slider_section .detail-box .btn-box .btn1 {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: #00bbf0;
+    color: #ffffff;
+    border-radius: 0;
+    border-radius: 250px !important;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+
+.del-main {
+    /* Darker background with linear gradient */
+    background-image: linear-gradient(rgba(20, 9, 96, 0.7), rgba(20, 9, 96, 0.7)), url(/images/project.jpg);
+    background-size: cover;
+    height: 50vh;
+}
+.del-new-one{
+    color: white;
+    font-size: 50px;
+}
+.del-des{
+        color: white;
+        font-size: 20px;
+}
+.img-box img{
+    width: 50vh;
+}
+.about_section{
+    background: fixed;
+}
+.top-title{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+}
