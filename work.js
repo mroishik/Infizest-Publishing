@@ -1,6 +1,41 @@
 $(document).ready(function () {
   AOS.init();
 });
+document.getElementById("popupBtn").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "block";
+});
+
+document.getElementById("fresherBtn").addEventListener("click", function () {
+  // Redirect to the page for fresher
+  window.location.href = "fresher_page.html";
+});
+
+document
+  .getElementById("experiencedBtn")
+  .addEventListener("click", function () {
+    // Redirect to the page for experienced
+    window.location.href = "experienced_page.html";
+  });
+
+// auto date cvalculation
+function calculateTotalTime(index) {
+  var startDate = new Date(
+    document.getElementsByName("Start_Date_" + index)[0].value
+  );
+  var endDate = new Date(
+    document.getElementsByName("End_Date_" + index)[0].value
+  );
+
+  if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+    var diffTime = endDate.getTime() - startDate.getTime();
+    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementsByName("Total_Time_" + index)[0].value =
+      diffDays + " days";
+  } else {
+    document.getElementsByName("Total_Time_" + index)[0].value = "";
+  }
+}
+
 // Counting animation
 function countToTarget(counterId, targetValue, duration) {
   const counter = document.getElementById(counterId);
@@ -125,3 +160,111 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   textAnimation.play();
 });
+
+// Carrer Form
+document.getElementById("popupBtn").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "block";
+});
+
+document.getElementById("fresherBtn").addEventListener("click", function () {
+  // Redirect to the page for fresher
+  window.location.href = "fresher_page.html";
+});
+
+document
+  .getElementById("experiencedBtn")
+  .addEventListener("click", function () {
+    // Redirect to the page for experienced
+    window.location.href = "experienced_page.html";
+  });
+
+// contact form
+function initMap() {
+  // Styles a map in night mode.
+  var map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 52.1380659, lng: -106.6572985 },
+    zoom: 12,
+    mapTypeControl: false,
+    disableDefaultUI: true,
+    styles: [
+      { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [{ color: "#263c3f" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#6b9a76" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [{ color: "#38414e" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#212a37" }],
+      },
+      {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#9ca5b3" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [{ color: "#746855" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#1f2835" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#f3d19c" }],
+      },
+      {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [{ color: "#2f3948" }],
+      },
+      {
+        featureType: "transit.station",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [{ color: "#17263c" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#515c6d" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#17263c" }],
+      },
+    ],
+  });
+}

@@ -1,0 +1,149 @@
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Contact Form</title>
+
+      <link rel="stylesheet" href="contactPage.css" />
+      <script src="contactPage.js"></script>
+    </head>
+    <body>
+      <div class="container" style="background: #100420">
+        <div class="row">
+          <div class="col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">
+                <img src="/images/fulllogo.jpg" width="30" height="30" alt="" />
+              </a>
+
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul
+                  class="navbar-nav mr-auto"
+                  style="display: flex; justify-content: flex-end"
+                >
+                  <li class="nav-item active" style="padding: 10px">
+                    <a
+                      class="nav-link"
+                      style="
+                        text-decoration: none;
+                        color: white;
+                        font-size: 30px;
+                      "
+                      href="index.html"
+                      >Home
+                    </a>
+                  </li>
+
+                  <li class="nav-item" style="padding: 10px">
+                    <a
+                      class="nav-link"
+                      style="
+                        text-decoration: none;
+                        color: white;
+                        font-size: 30px;
+                      "
+                      href="#"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item" style="padding: 10px">
+                    <a
+                      class="nav-link"
+                      style="
+                        text-decoration: none;
+                        color: white;
+                        font-size: 30px;
+                      "
+                      href="career.html"
+                      >Caarees</a
+                    >
+                  </li>
+                  <li class="nav-item" style="padding: 10px; font-size: 16px">
+                    <a
+                      class="nav-link"
+                      style="
+                        text-decoration: none;
+                        color: white;
+                        font-size: 30px;
+                      "
+                      href="contact.html"
+                      >Contacts</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="left">
+            <h1>Contact Me</h1>
+
+            <div class="formbox">
+              <form>
+                <input
+                  name="name"
+                  type="text"
+                  class="short"
+                  placeholder="Name"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='Name'"
+                />
+                <input
+                  name="email"
+                  type="text"
+                  class="short"
+                  placeholder="Email"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='Email'"
+                />
+                <input
+                  name="subject"
+                  type="text"
+                  class="feedback-input"
+                  placeholder="Subject"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='Subject'"
+                />
+                <textarea
+                  name="text"
+                  class="feedback-input"
+                  placeholder="Message"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='Message'"
+                ></textarea>
+                <input type="submit" value="SEND" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="right">
+          <div id="map"></div>
+          <div id="map-overlap">
+            Infizest Publishings <br />
+            Rupantar Buliding , <br />
+            2nd Floor, 871 Jessor Road. Syamnagar, Dum-dum , Kolkata, Pin-
+            700055
+            <br />
+            <br />
+            <span>
+              <br />
+              <span id="at">@</span>
+              :hello@infizest.com
+            </span>
+          </div>
+        </div>
+        <div id="cleared"></div>
+      </div>
+
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDts9C9iWNF83ExezBXJLIJ0g2dwoERg08&callback=initMap"
+        async
+        defer
+      ></script>
+    </body>
+  </html>
+</html>
