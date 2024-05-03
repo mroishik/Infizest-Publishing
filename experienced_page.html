@@ -141,8 +141,11 @@
           <label>
             Application for *
             <select name="Application for" style="color: black" required>
-              <option style="color: black">Content Writing</option>
-              <option style="color: black">Web Development</option>
+              <option style="color: black">Content Publishing</option>
+              <option style="color: black">Web Devlopment</option>
+              <option style="color: black">Content Head</option>
+              <option style="color: black">Operation</option>
+              <option style="color: black">Digital Marketing</option>
             </select>
           </label>
         </fieldset>
@@ -159,7 +162,7 @@
               />
             </label>
             <label>
-              Family name *
+              Last name *
               <input
                 type="text"
                 style="color: black"
@@ -170,7 +173,7 @@
           </div>
           <div class="two-cols">
             <label>
-              Citizenship
+              State
               <input type="text" style="color: black" name="Citizenship" />
             </label>
             <label>
@@ -188,7 +191,7 @@
           </label>
           <div class="two-cols">
             <label>
-              ZIP Code
+              Pin Code
               <input type="text" style="color: black" name="ZIP" />
             </label>
             <label>
@@ -213,6 +216,7 @@
             <thead>
               <tr>
                 <th>Organization Name</th>
+                <th>Designation</th>
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Total Time</th>
@@ -220,14 +224,21 @@
             </thead>
             <tbody>
               <tr>
-                <td style="width: 500px">
+                <td style="width: 50vw">
                   <input
                     type="text"
                     style="color: black"
                     name="Organization_Name_1"
                   />
                 </td>
-                <td style="width: 500px">
+                <td style="width: 50vw">
+                  <input
+                    type="text"
+                    style="color: black"
+                    name="Designation_1"
+                  />
+                </td>
+                <td style="width: 200px">
                   <input
                     type="date"
                     style="color: black"
@@ -235,7 +246,7 @@
                     onchange="calculateTotalTime(1)"
                   />
                 </td>
-                <td style="width: 500px">
+                <td style="width: 200px">
                   <input
                     type="date"
                     style="color: black"
@@ -243,7 +254,7 @@
                     onchange="calculateTotalTime(1)"
                   />
                 </td>
-                <td style="width: 500px">
+                <td style="width: 50vw">
                   <input
                     type="text"
                     style="color: black"
@@ -258,6 +269,13 @@
                     type="text"
                     style="color: black"
                     name="Organization_Name_2"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    style="color: black"
+                    name="Designation_2"
                   />
                 </td>
                 <td>
@@ -295,6 +313,13 @@
                 </td>
                 <td>
                   <input
+                    type="text"
+                    style="color: black"
+                    name="Designation_3"
+                  />
+                </td>
+                <td>
+                  <input
                     type="date"
                     style="color: black"
                     name="Start_Date_3"
@@ -321,6 +346,7 @@
             </tbody>
           </table>
         </fieldset>
+
         <fieldset>
           <legend>Application documents</legend>
           <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
@@ -386,7 +412,7 @@
 
         <fieldset>
           <div>
-            <label>
+            <label style="width: 200vw">
               <input
                 type="checkbox"
                 name="Data processing confirmed"
@@ -395,13 +421,13 @@
               />
               <span
                 >I agree to the processing of my data for the handling of my
-                request by <a href="about.html" target="_blank">Infizent</a>.
+                request by <a href="about.html" target="_blank">Infizest</a>.
                 *</span
               >
             </label>
           </div>
         </fieldset>
-        <div class="btns">
+        <div class="btns" style="width: 50vw">
           <input type="text" name="_gotcha" value="" style="display: none" />
           <input type="submit" value="Submit application" />
         </div>

@@ -136,8 +136,11 @@
                 <label>
                   Application for *
                   <select name="Application for" style="color: black" required>
-                    <option style="color: black">Content Writing</option>
+                    <option style="color: black">Content Publishing</option>
                     <option style="color: black">Web Devlopment</option>
+                    <option style="color: black">Content Head</option>
+                    <option style="color: black">Operation</option>
+                    <option style="color: black">Digital Marketing</option>
                   </select>
                 </label>
               </fieldset>
@@ -154,7 +157,7 @@
                     />
                   </label>
                   <label>
-                    Family name *
+                    Last name *
                     <input
                       type="text"
                       style="color: black"
@@ -165,7 +168,7 @@
                 </div>
                 <div class="two-cols">
                   <label>
-                    Citizenship
+                    State
                     <input
                       type="text"
                       style="color: black"
@@ -191,7 +194,7 @@
                 </label>
                 <div class="two-cols">
                   <label>
-                    ZIP Code
+                    Pin Code
                     <input type="text" style="color: black" name="ZIP" />
                   </label>
                   <label>
@@ -226,47 +229,15 @@
                   <thead>
                     <tr>
                       <th>Level</th>
-                      <th>School Name</th>
+                      <th>Institude Name</th>
                       <th>Percentage</th>
+                      <th>Major</th>
+                      <th>Stream</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td style="width: 500px">10th</td>
-                      <td style="width: 700px">
-                        <input
-                          type="text"
-                          style="color: black"
-                          name="School_10th"
-                        />
-                      </td>
-                      <td style="width: 700px">
-                        <input
-                          type="text"
-                          style="color: black"
-                          name="Percent_10th"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>12th</td>
-                      <td>
-                        <input
-                          type="text"
-                          name="School_12th"
-                          style="color: black"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="Percent_12th"
-                          style="color: black"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Graduation</td>
+                      <td>Higher Education</td>
                       <td>
                         <input
                           type="text"
@@ -281,10 +252,63 @@
                           style="color: black"
                         />
                       </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="Major_Graduation"
+                          style="color: black"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="Stream_Graduation"
+                          style="color: black"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 500px">12th</td>
+                      <td style="width: 700px">
+                        <input
+                          type="text"
+                          style="color: black"
+                          name="School_10th"
+                        />
+                      </td>
+                      <td style="width: 700px">
+                        <input
+                          type="text"
+                          style="color: black"
+                          name="Percent_10th"
+                        />
+                      </td>
+                      <td style="width: 700px"></td>
+                      <td style="width: 700px"></td>
+                    </tr>
+                    <tr>
+                      <td>10th</td>
+                      <td>
+                        <input
+                          type="text"
+                          name="School_12th"
+                          style="color: black"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="Percent_12th"
+                          style="color: black"
+                        />
+                      </td>
+                      <td></td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
               </fieldset>
+
                
 
               <fieldset>
@@ -292,7 +316,7 @@
                 <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                 <div class="two-cols">
                   <label>
-                    Application letter
+                    Drop Your Cover Letter
                     <input
                       type="file"
                       name="Application letter"
@@ -300,11 +324,12 @@
                     />
                   </label>
                   <label>
-                    Curriculum vitae
+                    Drop Your Resume
                     <input
                       type="file"
                       name="Curriculum vitae"
                       accept=".doc,.docx,.pdf"
+                      required
                     />
                   </label>
                 </div>
@@ -322,7 +347,7 @@
                     <span
                       >I agree to the processing of my data for the handling of
                       my request by
-                      <a href="about.html" target="_blank">Infizent</a>. *</span
+                      <a href="about.html" target="_blank">Infizest</a>. *</span
                     >
                   </label>
                 </div>
@@ -334,7 +359,11 @@
                   value=""
                   style="display: none"
                 />
-                <input type="submit" value="Submit application" />
+                <input
+                  type="submit"
+                  value="Submit application"
+                  style="width: 30vw"
+                />
               </div>
             </form>
           </div>

@@ -100,7 +100,7 @@ body{
    
 }
 .grid-pro{
-  background: url(/images/happy-co-workers-close-window.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(/images/happy-co-workers-close-window.jpg);
   background-size: cover;
   height: 70vh;
   text-align: center;
@@ -129,7 +129,7 @@ body{
   text-shadow: 0 0 1px #100420, 0 0 10px #f3f3f3; /* Apply multiple shadows with different colors */
 }
 .grid-fresher{
-    background: url(/images/bussiness-people-working-team-office.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/images/bussiness-people-working-team-office.jpg);
     background-size: cover;
     height: 70vh;
     text-align: center;
@@ -158,29 +158,35 @@ body{
     text-shadow: 0 0 1px #100420, 0 0 10px #f3f3f3; /* Apply multiple shadows with different colors */
 }
 
-
 .popup {
-    display: none; /* Hide the popup by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 9999;
-  }
+  display: none; /* Hide the popup by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
 
-  .popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
+.popup-content {
+  position: relative;
+}
 
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+.close-popup:hover {
+  color: #f00; /* Change color on hover if desired */
+}
 /* Form css */
 /* General form styling (adjust as needed) */
 form fieldset {
@@ -756,9 +762,7 @@ input.short{
     outline:0;
 }
 
-input:focus{
-    /*border-bottom: 2px solid cyan;*/
-}
+
 
 
 #map-overlap{

@@ -16,8 +16,19 @@ document
     // Redirect to the page for experienced
     window.location.href = "experienced_page.html";
   });
-
-// auto date cvalculation
+// Wrap the code in an event listener for DOMContentLoaded to ensure it runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the close button exists before adding the event listener
+  var closeButton = document.querySelector(".close-popup");
+  if (closeButton) {
+    closeButton.addEventListener("click", function () {
+      // Hide the popup
+      document.getElementById("popup").style.display = "none";
+    });
+  } else {
+    console.error("Close button not found!");
+  }
+});
 function calculateTotalTime(index) {
   var startDate = new Date(
     document.getElementsByName("Start_Date_" + index)[0].value
@@ -27,10 +38,23 @@ function calculateTotalTime(index) {
   );
 
   if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
-    var diffTime = endDate.getTime() - startDate.getTime();
-    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    var diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+    var diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    var years = Math.floor(diffDays / 365);
+    var months = Math.floor((diffDays % 365) / 30);
+    var days = diffDays % 30;
+    var totalTime = "";
+    if (years > 0) {
+      totalTime += years + " years ";
+    }
+    if (months > 0) {
+      totalTime += months + " months ";
+    }
+    if (days > 0) {
+      totalTime += days + " days";
+    }
     document.getElementsByName("Total_Time_" + index)[0].value =
-      diffDays + " days";
+      totalTime.trim();
   } else {
     document.getElementsByName("Total_Time_" + index)[0].value = "";
   }
@@ -166,23 +190,26 @@ document.getElementById("popupBtn").addEventListener("click", function () {
   document.getElementById("popup").style.display = "block";
 });
 
-document.getElementById("fresherBtn").addEventListener("click", function () {
-  // Redirect to the page for fresher
-  window.location.href = "fresher_page.html";
-});
-
-document
-  .getElementById("experiencedBtn")
-  .addEventListener("click", function () {
-    // Redirect to the page for experienced
-    window.location.href = "experienced_page.html";
+document.addEventListener("DOMContentLoaded", function () {
+  // Event listener for the fresher button
+  document.getElementById("fresherBtn").addEventListener("click", function () {
+    // Redirect to the page for fresher
+    window.location.href = "fresher_page.html";
   });
 
+  // Event listener for the experienced button
+  document
+    .getElementById("experiencedBtn")
+    .addEventListener("click", function () {
+      // Redirect to the page for experienced
+      window.location.href = "experienced_page.html";
+    });
+});
 // contact form
 function initMap() {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 52.1380659, lng: -106.6572985 },
+    center: { lat: 22.9868, lng: 87.855 }, // West Bengal, India
     zoom: 12,
     mapTypeControl: false,
     disableDefaultUI: true,
