@@ -1,6 +1,65 @@
 $(document).ready(function () {
   AOS.init();
 });
+
+// JavaScript to increment counters
+function startCounters() {
+  var counter1 = document.querySelector(".counter1");
+  var counter2 = document.querySelector(".counter2");
+  var counter3 = document.querySelector(".counter3");
+  var counter4 = document.querySelector(".counter4");
+
+  var count1 = 0;
+  var count2 = 0;
+  var count3 = 0;
+  var count4 = 0;
+
+  var interval = setInterval(function () {
+    count1++;
+    count2++;
+    count3++;
+    count4++;
+    counter1.textContent = count1 + "K";
+    counter2.textContent = count2 + "K";
+    counter3.textContent = count3 + "K";
+    counter4.textContent = count4 + "K";
+
+    // Stop counters at desired value
+    if (count1 >= 50 || count2 >= 100 || count3 >= 70 || count4 >= 80) {
+      clearInterval(interval);
+    }
+  }, 10); // Adjust the interval for desired speed
+}
+// Progress bar
+document.addEventListener("DOMContentLoaded", function () {
+  var progressBar = document.querySelectorAll(".progress-bar");
+
+  progressBar.forEach(function (bar) {
+    var percentage = bar.getAttribute("data-percentage");
+    var progressContent = bar.querySelector(".progress-content");
+
+    progressContent.style.width = percentage;
+  });
+});
+// Faq box
+document.addEventListener("DOMContentLoaded", function () {
+  var accordionButtons = document.querySelectorAll(".accordion-button");
+
+  accordionButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var collapseTargetId = this.getAttribute("data-bs-target");
+      var collapseTarget = document.querySelector(collapseTargetId);
+
+      if (collapseTarget.classList.contains("collapse")) {
+        collapseTarget.classList.toggle("show");
+      }
+    });
+  });
+});
+
+// faq box ends
+// Start counters when the page loads
+window.addEventListener("load", startCounters);
 document.getElementById("popupBtn").addEventListener("click", function () {
   document.getElementById("popup").style.display = "block";
 });
@@ -172,6 +231,8 @@ $(".testimonial-wrapper").slick({
     },
   ],
 });
+
+// The Main Justified Images POLYGO
 // Wait for the DOM to be ready
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -295,3 +356,5 @@ function initMap() {
     ],
   });
 }
+
+// counter Bar Js

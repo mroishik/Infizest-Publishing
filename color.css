@@ -1,4 +1,4 @@
- /* Importing Fonts */
+-box /* Importing Fonts */
  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -22,7 +22,16 @@
     transition: all 0.3s;
     border: none;
 }
-
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: black !important;
+  white-space: nowrap;
+  background-color: #100420 !important;
+  transition: width .6s ease;
+}
 .del-main {
     /* Darker background with linear gradient */
     background-image: linear-gradient(rgba(20, 9, 96, 0.7), rgba(20, 9, 96, 0.7)), url(/images/project.jpg);
@@ -58,6 +67,301 @@
     color: #ffffff;
 }
 
+
+/* About Us  */
+
+.line{
+  border: 3px solid #BFA977;
+  height: 94vh;
+  width: 30vw;
+  border-radius: 20px;
+  margin-left: 6vw;
+
+}
+.line-img-i{
+  border-radius: 20px;
+}
+.line-img-ii{
+  padding-left: 15vw;
+  border-radius: 20px;
+
+}
+.abt-right{
+  margin-top: 40vh;
+  
+}
+.abt-right h4{
+  font-family: "Varela Round", sans-serif;
+  font-size: 50px;
+}
+.abt-right p{
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+}
+.transport p{
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+.discover-btn {
+  width: 204.92px;
+  height: 58.39px;
+  padding: 16px 32px;
+  padding-left: 30px;
+  background-color: white;
+  border: none;
+  color: #100420;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Added border-color transition */
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 5px;
+}
+
+.discover-btn:hover {
+  background-color: white;
+  color: #FFAE21;
+  border: 2px solid #FFAE21; /* Added border style on hover */
+}
+
+
+/* partners css */
+.partners{
+  background: #100420;
+}
+.partners .row .col-xl-2 img{
+  color: white;
+  background-color: white;
+}
+.partners .row img:hover {
+  filter: grayscale(0%);
+}
+.del-main {
+
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #F14902;
+  background-image: url(/images/texture.png);
+}
+.del-new-one{
+  font-family: "Lato", sans-serif;
+  font-size: 51.7px;
+  color: #FFAE21;
+  font-weight:700;
+  margin-bottom: -12px;
+}
+.del-des{
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  color: #FFAE21;
+} 
+
+/* Why Us grid  */
+.why-us{
+  background: #100420;
+  
+  
+}
+.about-img-wrapper-two{
+  margin-top: 20vh;
+}
+.container-why {
+  max-width: 1370px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: white !important;
+ 
+  white-space: nowrap;
+
+  transition: width .6s ease;
+}
+.section-heading{
+  font-family: "Lato", sans-serif;
+  font-size:50px;
+  color: #BFA977 !important;
+  font-weight: 900;
+}
+.bar-info{
+  align-items: center;
+  margin-top: 40vh;
+}
+.section-sub-heading{
+  font-family: "Lato", sans-serif;
+    font-size: 51.7px;
+    color: white;
+    font-weight: 700;
+}
+.orange-text-one{
+  font-family: sans-serif;
+
+  color: #BFA977 ;
+  font-weight: bold;
+  height: 30px;
+}
+.text-start {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.progress-bar {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.progress-title-holder {
+  margin-bottom: 10px;
+}
+
+.progress-content-outter {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-content {
+  background-color: #FFAE21;
+  border-radius: 5px;
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+.progress-title{
+  margin-right: 68vh;
+}
+
+/* Faq box  */
+/* Style for accordion */
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-button:focus {
+  outline: none;
+}
+
+.accordion-button.collapsed {
+  background-color: #e9ecef;
+}
+
+.accordion-body {
+  background-color: #f8f9fa;
+  color: #212529;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Custom icon for accordion */
+.down-arrow {
+  display: inline-block;
+  margin-left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+}
+.info_section {
+  background-color: #100420!important;
+  color: #100420 !important;
+}
+.faq {
+  background: #100420;
+  border-radius: 4px;
+  position: relative;
+
+}
+.accordion-button.collapsed {
+  background-color: #e9ecef;
+  font-size: 16px;
+}
+
+
+  .gradient-text {
+  background-image: linear-gradient(to right,  #100420, #ffc371);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.layout_padding {
+  padding: 90px 0;
+  background: #100420 !important;
+}
+/* Whatsapp Blink */
+
+#whatsapp .wtsapp:focus {
+  border: none;
+  outline: none;
+}
+
+#whatsapp .wtsapp {
+  position: fixed;
+  transition: all 0.5s ease;
+  background: #25d366;
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* margin: 0; */
+  border-radius: 50px;
+  border-right: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  bottom: 20px; /* Changed bottom position */
+  right: 20px; /* Changed right position */
+  border: 0;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+}
+
+#whatsapp .wtsapp:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
 
 /* Career Page Buliding */
 
@@ -884,3 +1188,6 @@ textarea {
 a{
   text-decoration:none !important;
 }
+
+
+/* Footer Design */
